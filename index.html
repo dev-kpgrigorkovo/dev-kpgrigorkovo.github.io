@@ -660,6 +660,19 @@
 				$(this).powerTip('show');
 			});
 		});
+		function scrollToCenter() {
+			const contentWidth = document.documentElement.scrollWidth;
+			const viewportWidth = window.innerWidth;
+		
+			if (contentWidth > viewportWidth) {
+				const scrollLeft = (contentWidth - viewportWidth) / 2;
+				window.scrollTo(scrollLeft, 0);
+			}
+		}
+		
+		// Вызываем функцию прокрутки при загрузке страницы или изменении размеров окна
+		window.addEventListener('DOMContentLoaded', scrollToCenter);
+		window.addEventListener('resize', scrollToCenter);
 	</script>
 </body>
 </html>
