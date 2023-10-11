@@ -654,7 +654,8 @@
 			$(this).on('click', function() {
 				$(this).data('powertipjq', popup);
 				$(this).powerTip({
-					placement: 's',
+					placement: 'n',
+					smartPlacement: true,
 					mouseOnToPopup: true
 				});
 				$(this).powerTip('show');
